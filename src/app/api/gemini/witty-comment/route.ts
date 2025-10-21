@@ -3,6 +3,15 @@ import { GoogleGenAI } from "@google/genai";
 
 export async function POST(request: NextRequest) {
   try {
+    // Check if API key is available
+    if (!process.env.GOOGLE_GEMINI_API_KEY) {
+      console.error("GOOGLE_GEMINI_API_KEY is not set");
+      return NextResponse.json(
+        { error: "Gemini API key not configured" },
+        { status: 500 }
+      );
+    }
+
     const { genres } = await request.json();
 
     if (!genres || !Array.isArray(genres) || genres.length === 0) {
@@ -34,7 +43,7 @@ Keep it short (max 5 words), playful, and purely in Tagalog/Taglish. Sound like 
 
     // Initialize the Google GenAI client
     const ai = new GoogleGenAI({
-      apiKey: "AIzaSyAa5RT-0D0tJkIvhgwv_i3eT5HndeuH8XY",
+      apiKey: process.env.GOOGLE_GEMINI_API_KEY!,
     });
 
     // Generate content

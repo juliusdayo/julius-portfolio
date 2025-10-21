@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Image from "next/image";
 import {
@@ -42,7 +42,7 @@ interface SpotifyArtist {
   };
 }
 
-export default function SpotifyPage() {
+function SpotifyContent() {
   const [user, setUser] = useState<SpotifyUser | null>(null);
   const [accessToken, setAccessToken] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -625,5 +625,32 @@ export default function SpotifyPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+function LoadingSpinner() {
+  return (
+    <div
+      className="min-h-screen py-20 flex items-center justify-center"
+      style={{ backgroundColor: "#121212", color: "#ffffff" }}
+    >
+      <div className="text-center">
+        <div
+          className="inline-block animate-spin rounded-full h-8 w-8 border-b-2"
+          style={{ borderColor: "#1db954" }}
+        ></div>
+        <p className="mt-2" style={{ color: "#b3b3b3" }}>
+          Loading Spotify...
+        </p>
+      </div>
+    </div>
+  );
+}
+
+export default function SpotifyPage() {
+  return (
+    <Suspense fallback={<LoadingSpinner />}>
+      <SpotifyContent />
+    </Suspense>
   );
 }
