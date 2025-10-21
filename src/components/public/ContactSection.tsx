@@ -46,7 +46,9 @@ export default function ContactSection() {
               >
                 Email
               </h3>
-              <p style={{ color: "var(--platinum)" }}>julius@example.com</p>
+              <p style={{ color: "var(--platinum)" }}>
+                julius.coros10@gmail.com
+              </p>
             </div>
 
             <div
@@ -76,7 +78,7 @@ export default function ContactSection() {
               >
                 Location
               </h3>
-              <p style={{ color: "var(--platinum)" }}>New York, NY</p>
+              <p style={{ color: "var(--platinum)" }}>Angono, Rizal</p>
             </div>
 
             <div
@@ -102,7 +104,7 @@ export default function ContactSection() {
               >
                 Phone
               </h3>
-              <p style={{ color: "var(--platinum)" }}>+1 (555) 123-4567</p>
+              <p style={{ color: "var(--platinum)" }}>+639612176265</p>
             </div>
           </div>
 
