@@ -45,50 +45,107 @@ export default function AboutSection() {
                 style={{ backgroundColor: "var(--white)" }}
               >
                 <h4
-                  className="text-xl font-semibold mb-3"
+                  className="text-xl font-semibold mb-4"
                   style={{ color: "var(--orange-web)" }}
                 >
                   Skills & Technologies
                 </h4>
-                <div className="flex flex-wrap gap-2">
-                  {[
-                    "JavaScript",
-                    "TypeScript",
-                    "React",
-                    "Next.js",
-                    "Node.js",
-                    "Python",
-                    "AWS",
-                    "Docker",
-                  ].map((skill) => (
-                    <span
-                      key={skill}
-                      className="px-3 py-1 rounded-full text-sm font-medium"
-                      style={{
-                        backgroundColor: "var(--oxford-blue)",
-                        color: "var(--white)",
-                      }}
-                    >
-                      {skill}
-                    </span>
-                  ))}
+                
+                {/* Languages */}
+                <div className="mb-4">
+                  <h5
+                    className="text-sm font-semibold mb-2 uppercase tracking-wide"
+                    style={{ color: "var(--oxford-blue)" }}
+                  >
+                    Languages
+                  </h5>
+                  <div className="flex flex-wrap gap-2">
+                    {["JavaScript", "TypeScript", "Python", "PHP"].map((skill) => (
+                      <span
+                        key={skill}
+                        className="px-3 py-1 rounded-full text-sm font-medium"
+                        style={{
+                          backgroundColor: "var(--oxford-blue)",
+                          color: "var(--white)",
+                        }}
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-              <div
-                className="p-6 rounded-lg shadow-lg"
-                style={{ backgroundColor: "var(--white)" }}
-              >
-                <h4
-                  className="text-xl font-semibold mb-3"
-                  style={{ color: "var(--orange-web)" }}
-                >
-                  Experience
-                </h4>
-                <p style={{ color: "var(--oxford-blue)" }}>
-                  5+ years of experience in full-stack development, working with
-                  startups and established companies to deliver high-quality
-                  software solutions.
-                </p>
+
+                {/* Libraries/Frameworks */}
+                <div className="mb-4">
+                  <h5
+                    className="text-sm font-semibold mb-2 uppercase tracking-wide"
+                    style={{ color: "var(--oxford-blue)" }}
+                  >
+                    Libraries/Frameworks
+                  </h5>
+                  <div className="flex flex-wrap gap-2">
+                    {["ReactJS", "Next.js", "Svelte", "Laravel", "CodeIgniter", "Node.js"].map((skill) => (
+                      <span
+                        key={skill}
+                        className="px-3 py-1 rounded-full text-sm font-medium"
+                        style={{
+                          backgroundColor: "var(--oxford-blue)",
+                          color: "var(--white)",
+                        }}
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Databases */}
+                <div className="mb-4">
+                  <h5
+                    className="text-sm font-semibold mb-2 uppercase tracking-wide"
+                    style={{ color: "var(--oxford-blue)" }}
+                  >
+                    Databases
+                  </h5>
+                  <div className="flex flex-wrap gap-2">
+                    {["MySQL", "PostgreSQL", "NoSQL"].map((skill) => (
+                      <span
+                        key={skill}
+                        className="px-3 py-1 rounded-full text-sm font-medium"
+                        style={{
+                          backgroundColor: "var(--oxford-blue)",
+                          color: "var(--white)",
+                        }}
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Cloud */}
+                <div>
+                  <h5
+                    className="text-sm font-semibold mb-2 uppercase tracking-wide"
+                    style={{ color: "var(--oxford-blue)" }}
+                  >
+                    Cloud
+                  </h5>
+                  <div className="flex flex-wrap gap-2">
+                    {["AWS", "Azure", "GCP"].map((skill) => (
+                      <span
+                        key={skill}
+                        className="px-3 py-1 rounded-full text-sm font-medium"
+                        style={{
+                          backgroundColor: "var(--oxford-blue)",
+                          color: "var(--white)",
+                        }}
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
               </div>
             </div>
           </div>
