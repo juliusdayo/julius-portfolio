@@ -50,7 +50,7 @@ export default function AboutSection() {
                 >
                   Skills & Technologies
                 </h4>
-                
+
                 {/* Languages */}
                 <div className="mb-4">
                   <h5
@@ -60,18 +60,20 @@ export default function AboutSection() {
                     Languages
                   </h5>
                   <div className="flex flex-wrap gap-2">
-                    {["JavaScript", "TypeScript", "Python", "PHP"].map((skill) => (
-                      <span
-                        key={skill}
-                        className="px-3 py-1 rounded-full text-sm font-medium"
-                        style={{
-                          backgroundColor: "var(--oxford-blue)",
-                          color: "var(--white)",
-                        }}
-                      >
-                        {skill}
-                      </span>
-                    ))}
+                    {["JavaScript", "TypeScript", "Python", "PHP"].map(
+                      (skill) => (
+                        <span
+                          key={skill}
+                          className="px-3 py-1 rounded-full text-sm font-medium"
+                          style={{
+                            backgroundColor: "var(--oxford-blue)",
+                            color: "var(--white)",
+                          }}
+                        >
+                          {skill}
+                        </span>
+                      )
+                    )}
                   </div>
                 </div>
 
@@ -84,7 +86,14 @@ export default function AboutSection() {
                     Libraries/Frameworks
                   </h5>
                   <div className="flex flex-wrap gap-2">
-                    {["ReactJS", "Next.js", "Svelte", "Laravel", "CodeIgniter", "Node.js"].map((skill) => (
+                    {[
+                      "ReactJS",
+                      "Next.js",
+                      "Svelte",
+                      "Laravel",
+                      "CodeIgniter",
+                      "Node.js",
+                    ].map((skill) => (
                       <span
                         key={skill}
                         className="px-3 py-1 rounded-full text-sm font-medium"
